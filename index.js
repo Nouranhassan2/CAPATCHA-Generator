@@ -1,6 +1,6 @@
 var span = document.querySelector(".text");
 var inputEl = document.querySelector("input");
-var result = "";
+var correctAnswer="";
 
 function getCapatchaAgain() {
   var chars = [
@@ -67,9 +67,12 @@ function getCapatchaAgain() {
     8,
     9,
   ];
+  var result = "";
+
   for (var i = 0; i <= 6; i++) {
     result += chars[Math.trunc(Math.random() * chars.length)];
-    span.innerHTML = result;
+    correctAnswer=result;
+    span.innerHTML = correctAnswer;
   }
 }
 function checkCapatcha() {
